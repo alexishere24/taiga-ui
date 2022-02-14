@@ -3,9 +3,15 @@ export abstract class AbstractExampleTuiInteractive {
 
     focusable = true;
 
+    disabled = false;
+
     pseudoFocused: boolean | null = null;
 
     pseudoHovered: boolean | null = null;
 
     pseudoPressed: boolean | null = null;
+
+    pseudoInvalid: boolean | null = null;
+
+    readOnly: boolean | null = null;
 }
