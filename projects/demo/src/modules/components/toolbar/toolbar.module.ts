@@ -5,10 +5,17 @@ import {RouterModule} from '@angular/router';
 import {generateRoutes, TuiAddonDocModule} from '@taiga-ui/addon-doc';
 import {TuiToolbarModule} from '@taiga-ui/addon-editor';
 import {TuiActiveZoneModule} from '@taiga-ui/cdk';
-import {TuiButtonModule, TuiDropdownModule, TuiLinkModule} from '@taiga-ui/core';
+import {
+    TuiButtonModule,
+    TuiDropdownModule,
+    TuiLinkModule,
+    TuiNotificationModule,
+} from '@taiga-ui/core';
+import {TuiIslandModule} from '@taiga-ui/kit';
 import {ContenteditableValueAccessorModule} from '@tinkoff/angular-contenteditable-accessor';
 
 import {TuiToolbarExample1} from './examples/1';
+import {TuiToolbarExample2} from './examples/2';
 import {ExampleTuiToolbarComponent} from './toolbar.component';
 
 @NgModule({
@@ -22,9 +29,11 @@ import {ExampleTuiToolbarComponent} from './toolbar.component';
         TuiDropdownModule,
         TuiActiveZoneModule,
         TuiAddonDocModule,
+        TuiIslandModule,
+        TuiNotificationModule,
         RouterModule.forChild(generateRoutes(ExampleTuiToolbarComponent)),
     ],
-    declarations: [ExampleTuiToolbarComponent, TuiToolbarExample1],
+    declarations: [ExampleTuiToolbarComponent, TuiToolbarExample1, TuiToolbarExample2],
     exports: [ExampleTuiToolbarComponent],
 })
 export class ExampleTuiToolbarModule {}

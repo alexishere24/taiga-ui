@@ -1,0 +1,15 @@
+<label>
+    <tui-toolbar [editor]="editor"></tui-toolbar>
+</label>
+
+<tui-island>
+    <div #editor contenteditable class="editor" [(ngModel)]="model"></div>
+</tui-island>
+
+<tui-notification status="info" class="tui-space_top-2">
+    <code>label</code>
+    elements can be associated to labeled elements. However, this behavior is
+    disabled for
+    <code>tui-toolbar</code>
+    tools.
+</tui-notification>
